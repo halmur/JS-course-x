@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #5f6779;
+  background-color: #fafffc;
+  background-color: #f9f9f9;
+  
+  display: grid;
+  justify-items: center;
+}
+  h1 a {
+    color: #47eab5;
+  }
+  #user-profiles {
+    margin-bottom: 40px;
+    padding-top: 35px;
+
+    display: grid;
+    grid-template: auto / minmax(250px, auto);
+    /* grid-template: auto / repeat(3, minmax(300px, 500px)); */
+    grid-row-gap: 25px;
+  }
+    .profile-card {
+      padding: 15px 25px;
+      border: 1px solid #bbb;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+      .user-name {
+        font-size: 1.2em;
+        font-weight: bolder;
+        color: #444;
+      }
+
+      .show-info-btn, .delete-btn {
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        text-transform: capitalize;
+        color: #fff;
+        background-color: #5f6779;
+      }
+      .show-info-btn {
+        margin-right: 10px;
+      }
+
+      /* elements that are displayed when button "show info" is clicked */
+      .name-and-location {
+        padding: 10px;
+        text-transform: capitalize;
+        display: flex;
+      }
+      .name-and-location span {
+        flex: auto;
+        margin-left: 5px;
+        font-style: italic;
+      }
+
+      .post-section {
+        padding: 15px 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+        .post {
+          margin: 0 10px;
+        }
+          .post-title {
+            margin-bottom: 8px;
+          }
+          .post-title:hover {
+            margin-bottom: 8px;
+            color: #333;
+          }
+          .post-title::first-letter {
+            text-transform: capitalize;
+          }
+
+          .post-comments {
+            margin: 0 25px 25px 10px;
+            padding: 0;
+          }
+            .comment {
+              padding: 8px 0;
+              border-bottom: 1px solid #eee;
+              list-style: none;
+              font-size: .9em;
+              color: #7282a8;
+            }
+            .comment::first-letter {
+              text-transform: capitalize;
+            }
+      
+
+      .todo-section {
+        margin-top: 30px;
+        padding: 15px 20px;
+        /* border: 1px solid #ccc; */
+        border-radius: 5px;
+      }
+        .todos {
+          margin: 0 10px;
+        }
+          .todo {
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+          }
+            .todo span {
+              color: lightseagreen;
+            }
+
+
+
+      .headingh3 {
+        margin-bottom: 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #bbb;
+        text-transform: capitalize;
+      }
