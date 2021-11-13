@@ -1,6 +1,7 @@
-Uppgift 3
+ Exercise: [20](https://github.com/halmur/ECU-Javascript/tree/master/exercise-20) - JSON fetch med async/await |
+ Github page: [userprofiles](https://halmur.github.io/J-Svan-ilj/user-profiles/)
 
-(OBS! Gå in på https://jsonplaceholder.typicode.com och se API-endpoints relation till varandra)
+    (OBS! Gå in på https://jsonplaceholder.typicode.com och se API-endpoints relation till varandra)
 
     1 Hämta data från https://jsonplaceholder.typicode.com/users.
 
@@ -25,6 +26,4 @@ Uppgift 3
       inlägget, ladda inläggets 5 senaste kommentarer.
       
  
-[Github page](https://halmur.github.io/J-Svan-ilj/user-profiles/)
-
-![fetch-user-profiles](https://user-images.githubusercontent.com/33270258/141472259-0445c80b-ee8e-480a-ae0f-270425cf1e9d.PNG)
+![userprofiles](https://user-images.githubusercontent.com/33270258/141657994-b1a473f3-114b-4e29-b2b1-34012e296c8a.PNG)
