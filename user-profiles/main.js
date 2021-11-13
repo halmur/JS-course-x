@@ -20,7 +20,7 @@ const createUserProfiles = async () => {
       
       const showInfoBtn = document.createElement('button')
       showInfoBtn.className = 'show-info-btn'
-      showInfoBtn.textContent = 'show info'
+      showInfoBtn.textContent = 'show-info'
       
       const deleteBtn = document.createElement('button')
       deleteBtn.className = 'delete-btn'
@@ -53,7 +53,7 @@ const createUserProfiles = async () => {
           postSection.className = 'post-section'
           
           const postHeading = document.createElement('h3')
-          postHeading.textContent = '5 post with comments'
+          postHeading.textContent = 'latest post with comments'
           postHeading.className = 'headingh3'
           postSection.appendChild(postHeading)
           
@@ -68,7 +68,7 @@ const createUserProfiles = async () => {
             
             const postTitle = document.createElement('p')
             postTitle.className = 'post-title'
-            postTitle.textContent = p.title
+            postTitle.innerHTML = `&#8227; ${p.title.charAt(0).toUpperCase()}${p.title.slice(1)}`
             postTitle.style.cursor = 'pointer'
             
             post.appendChild(postTitle)
@@ -115,7 +115,7 @@ const createUserProfiles = async () => {
             }
             const todo = document.createElement('p')
             todo.className = 'todo'
-            todo.innerHTML = `<span>${i}</span> - ${t.title}`
+            todo.innerHTML = `<span>${i}</span> - ${t.title.charAt(0).toUpperCase()}${t.title.slice(1)}`
             todos.appendChild(todo)
           })
 
