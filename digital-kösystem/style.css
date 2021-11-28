@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  background-color: #fafafa;
+  text-transform: capitalize;
+
+  display: grid;
+  grid-template: auto / 1fr 3.5fr 1fr;
+  row-gap: 30px;
+}
+  body > h1 {
+    grid-area: 1 / 1 / 2 / 4;
+    align-self: center;
+    margin: 0;
+    padding: 30px;
+    border-bottom: 1px solid #bbb;
+    color: #33a;
+    background-color: white;
+  }
+  
+  main {
+    grid-area: 2 / 2 / 3 / 3;
+    margin-bottom: 40px;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+    form {
+      margin-bottom: 25px;
+      padding: 0 10px 25px;
+      border-bottom: 1px solid #ccc;
+    }
+      #customer-name {
+        border-radius: 5px;
+      }
+      button {
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        text-transform: capitalize;
+        color: #fff;
+        background-color: #5f6779;
+        cursor: pointer;
+        transition: .3s;
+      }
+      /* button#standard {display: block;} */
+    
+
+    #queue {
+      padding: 0 10px;
+      border-bottom: 1px solid #ccc;
+    }
+      #queue-status {
+        text-transform: initial;
+      }
+      #queue-status::first-letter {
+        text-transform: uppercase;
+      }
+
+      #queue button {
+        border: 1px solid #aaa;
+        color: unset;
+        background-color: #7cffd4;
+      }
+      
+      #customers-list {
+        padding: 0;
+      }
+        #customers-list li {
+          padding: 5px;
+          list-style: none;
+        }

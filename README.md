@@ -1,7 +1,22 @@
-# JS Vanilla
+## JS Vanilla
+<br>
 
-Exercises
 
-* Repository: [ECU-Javascript](https://github.com/halmur/ECU-Javascript) /
- Exercise: [20](https://github.com/halmur/ECU-Javascript/tree/master/exercise-20) - JSON fetch med async/await (övningsuppgift 3, User-Profiles)
- | Github page: [userprofiles](https://halmur.github.io/J-Svan-ilj/user-profiles/)
+
+### Exercises
+
+  - Exercise 20 - JSON fetch med async/await | Övningsuppgifter 3 (User profiles)
+    * Repository: [ECU-Javascript](https://github.com/halmur/ECU-Javascript)
+    * Exercise: [Exercise-20](https://github.com/halmur/ECU-Javascript/tree/master/exercise-20)
+    * Github page: [user-profiles](https://halmur.github.io/J-Svan-ilj/user-profiles/)
+
+
+<br>
+
+
+### Inlämningsuppgifter
+
+  - Inlämningsuppgift 2 - Digital kösystem
+    * Repository: [ECU-Uppgifter](https://github.com/halmur/ECU-Uppgifter) / [Javascript](https://github.com/halmur/ECU-Uppgifter/tree/master/JavaScript)
+    * Inlämningsuppgift: [Inlämningsuppgift-2](https://github.com/halmur/ECU-Uppgifter/tree/master/JavaScript/Inl%C3%A4mningsuppgift-2) - Digital kösystem
+    * Github page: [Digital kösystem](https://halmur.github.io/J-Svan-ilj/user-profiles/) | _not correct page-link atm_
