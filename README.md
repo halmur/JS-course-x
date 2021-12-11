@@ -20,3 +20,8 @@
     * Repository: [ECU-Uppgifter](https://github.com/halmur/ECU-Uppgifter) / [Javascript](https://github.com/halmur/ECU-Uppgifter/tree/master/JavaScript)
     * Inlämningsuppgift: [Inlämningsuppgift-2](https://github.com/halmur/ECU-Uppgifter/tree/master/JavaScript/Inl%C3%A4mningsuppgift-2) - Digitalt kösystem
     * Github page: [Digital kösystem](https://halmur.github.io/J-Svan-ilj/digital-kösystem/)
+
+  - Inlämningsuppgift 3 - DC-Quiz
+    * Repository: [ECU-Uppgifter](https://github.com/halmur/ECU-Uppgifter) / [Javascript](https://github.com/halmur/ECU-Uppgifter/tree/master/JavaScript)
+    * Inlämningsuppgift: [Inlämningsuppgift-3](https://github.com/halmur/ECU-Uppgifter/tree/master/JavaScript/Inl%C3%A4mningsuppgift-3) - DC-Quiz
+    * Github page: [DC-Quiz](https://halmur.github.io/J-Svan-ilj/dc-quiz/)
