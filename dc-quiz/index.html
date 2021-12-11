@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>DC Quiz</title>
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <span>dc-q</span>
+      </div>
+
+      <span>makes you strong</span>
+      
+      <button type="button" id="toggle-theme" class="light-theme-btn">
+       switch to <span>dark</span> theme
+      </button>
+    </header>
+
+    <section id="dc-quiz">
+      <h1 id="current-active-question">Question - <span></span>/7</h1>
+      <div id="question-area"></div>
+      
+      <!-- is shown once all questions are taken -->
+      <div id="quiz-result">
+        <button id="get-results">get results</button>
+        <!-- span with id result> create in js -->
+        <span id="correct"></span>
+        <span id="wrong"></span>
+        <span id="result"></span>
+      </div>
+    </section>
+
+    <!-- is removed after used -->
+    <button id="take-the-quiz">Take the Quiz</button>
+    
+    <script src="main.js"></script>
+  </body>
+</html>
