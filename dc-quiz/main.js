@@ -15,35 +15,35 @@ const takeTheQuiz = document.querySelector('#take-the-quiz')
 quizQuestions = [
   {
     id: 1,
-    question: 'The number data-type are written with quotes, such as <code>let num = "5"</code>',
+    question: 'The <code>number</code> Data Type are written with quotes, such as <code>let num = "5"</code>',
     correctAnswers: 'no',
     possibleAnswers: ['yes', 'no'],
     points: 10
   },
   {
     id: 2,
-    question: 'Variables declared with the <code>const</code> keyword lets us change its value and data-type',
+    question: 'Variables declared with the <code>const</code> keyword lets us change its value and Data Type',
     correctAnswers: 'no',
     possibleAnswers: ['yes', 'no'],
     points: 20
   },
   {
     id: 3,
-    question: 'Boolean value can only be true or false',
+    question: 'Boolean value can only be <code>true</code> or <code>false</code>',
     correctAnswers: 'yes',
     possibleAnswers: ['yes', 'no'],
     points: 10
   },
   {
     id: 4,
-    question: 'Select non primitive data-type',
+    question: 'Select non primitive Data Type',
     correctAnswers: 'array',
     possibleAnswers: ['string', 'symbol', 'array'],
     points: 40
   },
   {
     id: 5,
-    question: 'The default value of the HTML <code>input</code> element\'s type attribute is',
+    question: 'The default value of the HTML <code>input</code> element\'s type attribute is:',
     correctAnswers: 'text',
     possibleAnswers: ['text', 'color', 'number'],
     points: 30
@@ -57,9 +57,9 @@ quizQuestions = [
   },
   {
     id: 7,
-    question: 'Which of following does not evaluate to <code>false</code> boolean value when compared with double "<code>==</code>" comparison operator',
-    correctAnswers: ['" false "', '" f "'],
-    possibleAnswers: [false, '" f "', 0, '-0', '1-1', '" false "', '+0'],
+    question: 'Which of following does not evaluate to <code>false</code> boolean value when compared with double <code>==</code> comparison operator',
+    correctAnswers: ['"false"', '"f"'],
+    possibleAnswers: [false, '"f"', 0, '-0', '1-1', '"false"', '+0'],
     points: 100
   }
 ]
@@ -163,7 +163,7 @@ const addQuestion = (questionNr) => {
       answerInputWrapper.className = 'answer-input-wrapper current-answers'
       let answerLabel = document.createElement('label')
       answerLabel.className = 'answer-label'
-      answerLabel.textContent = answer
+      answer === false ? answerLabel.innerHTML = `<code>${answer}</code> == <code>false</code>` : answerLabel.innerHTML = `${answer} == <code>false</code>`
       let answerInput = document.createElement('input')
       answerInput.type = 'checkbox'
       // answerInput.className = 'answer-btns'
@@ -231,10 +231,6 @@ takeTheQuiz.addEventListener('click', _ => {
 })
 
 
-
-
-
-
 // function to select different color scheme
 const toggleThemeBtn = document.querySelector('#toggle-theme')
 toggleThemeBtn.addEventListener('click', _ => {
@@ -274,10 +270,10 @@ toggleThemeBtn.addEventListener('click', _ => {
 
 
 // Tre frågor med ett påstående två svarsalternativ
-// 1 - The number data-type are written with quotes, such as <code>let num = "5"</code>
+// 1 - The number Data Type are written with quotes, such as <code>let num = "5"</code>
 // 2 - Text values are called text strings
 // 2 - Boolean value can only be true or false
-// 3 - Variables declared with the <code>const</code> keyword lets us change its value and data-type
+// 3 - Variables declared with the <code>const</code> keyword lets us change its value and Data Type
 
 
 // Tre frågor ska ha tre svarsalternativ.
@@ -292,7 +288,7 @@ toggleThemeBtn.addEventListener('click', _ => {
 
 
 // En fråga ska besvaras med checkboxar (minst fyra svarsalternativ)
-// 1 - Select non primitive data-type/s
+// 1 - Select non primitive Data Type/s
 //     string, number, bifint, boolean, undefined, symbol, null,  array
 
 
@@ -309,7 +305,7 @@ toggleThemeBtn.addEventListener('click', _ => {
 //       },
 //       {
 //         id: 2,
-//         question: 'Variables declared with the <code>const</code> keyword lets us change its value and the data-type',
+//         question: 'Variables declared with the <code>const</code> keyword lets us change its value and the Data Type',
 //         answer: 'no',
 //         points: 20
 //       },
