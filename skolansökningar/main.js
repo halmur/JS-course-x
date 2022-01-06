@@ -1,24 +1,10 @@
-/* Finns 2 buggar pcj em hemsk fetch med async/await.
- 
-  1 söker man på en specifik sak så ser man inte "columnTitle" för hobbies.
 
-  2 filtrerar man på en utbildning så får man upp pilar för vissa titlar "columnTitle"
-    vilket gör det möjligt att sortera listan för den filtrerade utbildning.
-    Om man därefter gör en sökning på t.ex drawing så får man upp en ny lista men pilarna
-    för sortering är kvar. Försöker man nu sortera så kommer man få tillbaka föregående lista
-    som var relaterat filtreringen på utbildning :(
-
-  Finns kanske 100 buggar ¯\_(ツ)_/¯
-*/
-
-// async function for all possible fetching
 const fetchData = async api => {
   const response = await fetch(api)
   const responseData = await response.json()
   return responseData
 }
 
-// existing html elements and global variables
 let schools
 let students
 const main = document.querySelector('main')
@@ -28,13 +14,7 @@ const filterEducation = document.querySelectorAll('.filter-education option')
 let filterOrSearch = false // change to filterOrSearch
 let sortActivated = false
 
-/*
-  loop the student object and create elements for some info about each student beside
-  their hobbies.
-  
-  hobbies are shown first after a specific education is filtered and click is applied
-  to student name (studentFirstName) where user can see more info abut particular student
-*/
+
 function displayStudents(students, filterOrSearch) {
   console.log(filterOrSearch);
   students.forEach((student, i) => {
@@ -52,20 +32,16 @@ function displayStudents(students, filterOrSearch) {
     studentEducation.textContent = student.programme
     studentColumn.append(studentEntry, studentFirstName, studentLastName, studentAge, studentEducation)
 
-    // create element that displays student hobbies and add click to studentFirstName. Runs when filter is used
     if (filterOrSearch) {
       let sH = student.hobbies
       const studentHobbies = document.createElement('span')
       studentHobbies.textContent = `${sH[0]}${sH[2] !== undefined ? `, ${sH[1]}, ${sH[2]}` : `${sH[1] !== undefined ? `, ${sH[1]}` : ''}`}`
       studentAge.insertAdjacentElement('afterend', studentHobbies)
 
-
-      // makes it possible for users to se a list of schools and how they suit a student
       studentFirstName.className = 'student-first-name_hover'
       studentFirstName.addEventListener('click', e => {
         e.stopPropagation()
 
-        // identify and store matched schools
         const schoolPriorities = []
         function identifySchools() {
           const identifiedSchool = (school, schoolLostHobbies, noEducationMatch) => {
@@ -143,13 +119,6 @@ fetchData('https://api.mocki.io/v2/01047e91/students').then(responseStudents => 
 setTimeout(() => displayStudents(students, filterOrSearch), 1000);
 
 
-
-/*
-  remove previously displayed student info from the student-list and show only
-  student info that is matching a specific education
-  
-  info about all students can be listed back depending of the selected filter option
-*/
 function filterStudents(selectedFilterValue, whatToSort, invertSort, specificSearchMatch) {
   filterOrSearch = selectedFilterValue === 'all' ? false : true
 
@@ -163,7 +132,6 @@ function filterStudents(selectedFilterValue, whatToSort, invertSort, specificSea
 
   if (sortActivated) {
     console.log(sortActivated);
-    // sorting
     studentsToDisplay.sort((studentX, studentY) => {
       const sortNumericalValues = _ => invertSort ?  studentX[whatToSort] - studentY[whatToSort] : studentY[whatToSort] - studentX[whatToSort]
       const sortAlphabeticalValues = _ => invertSort ?  studentX[whatToSort] > studentY[whatToSort] : studentX[whatToSort] < studentY[whatToSort]
@@ -172,7 +140,6 @@ function filterStudents(selectedFilterValue, whatToSort, invertSort, specificSea
     console.log('sort done');
   }
 
-  // remove child's that are only individual students, the elements with class .student-column
   while (studentListWrapper.hasChildNodes()) {
     if (studentListWrapper.childElementCount === 1) {
       setTimeout(() => {
@@ -185,8 +152,6 @@ function filterStudents(selectedFilterValue, whatToSort, invertSort, specificSea
 }
 
 
-
-// user can select one education and get only students related to that education
 filterEducation.forEach(filterVal => {
   filterVal.addEventListener('click',  _ => {
     
@@ -199,16 +164,10 @@ filterEducation.forEach(filterVal => {
       }
 
       columnTitles.forEach((title, i) => {
-        /*
-          skip to remove child element for the "filter by" column title.
-          also the students and hobbies column title dont have children so we do return else we get
-          an typeError that their children is undefined.
-          the hobbies title is also removed completely
-        */
         if (columnTitles[0] === title ||
           columnTitles[columnTitles.length -1] === title ||
           columnTitles[columnTitles.length -2] === title) {
-            columnTitles[4].remove() // försöker ta bort all gånger påståendet stämmer
+            columnTitles[4].remove()
             return
         }
         title.children[0].remove()
@@ -219,26 +178,16 @@ filterEducation.forEach(filterVal => {
     const addSortArrows = filterVal => {
       const columnTitles = document.querySelectorAll('.column-title')
 
-      // clean previously filtered students related to an education
       if (columnTitles[1].children.length > 0) {
         removeSortArrows()
       }
 
-      // add new column title for student hobbies
       const columnTitle = document.createElement('span')
       columnTitle.className = 'column-title'
       columnTitle.textContent = 'hobbies'
       columnTitles[3].insertAdjacentElement('afterend', columnTitle)
 
       columnTitles.forEach(title => {
-        /*
-          skip sort arrows on first and last column title.
-          the numbered column title represent total students in the list while
-          the last column title is for filtering options
-
-          note the colum title for hobbies is not in the columnTitles array at this point in loop and will never be,
-          would need to run querySelectorAll('.column-title') again to see it
-        */
         if (columnTitles[0] === title || columnTitles[columnTitles.length -1] === title) {
           return
         }
@@ -265,8 +214,6 @@ filterEducation.forEach(filterVal => {
     }
     filterVal.value !== 'all' ? addSortArrows(filterVal.value) : removeSortArrows()
 
-    // removes and adds .student-columns
-    // this function can also sort student info for respective column-title while under selected education
     filterStudents(filterVal.value)
   })
 })

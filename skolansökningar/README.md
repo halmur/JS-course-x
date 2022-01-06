@@ -63,30 +63,9 @@ Kriterier för VG
 
 
 Senast inlämning 14 december
+```
 
-
-school matching priority
-
-backend students
-  cassandra: green, yellow 2, red 3
-  maria: green, yellow 2, red 3
-  fiona: green 1, yellow 1, red 3
-  neshin: green, yellow 2, red 3
-
-
-frontend students
-  marcus: green, yellow 3, red 2
-  winston: green, yellow 3, red 2
-  anna: green 2, yellow 1, red 2
-  orlando: green 1, yellow 2 and red 2
-
-
-.net students
-  hannah: green, yellow 2, red 3
-  ash: green 1, yellow 1, red 3
-  leona: green 1, yellow 1, red 3
-
-
+used api data
 const students = [
   {
       "firstName": "Marcus",
@@ -196,4 +175,28 @@ const schools = [
       "programmes":["Frontend"]
   }
 ]
+```
+
+```
+school matching priority
+
+backend students
+  cassandra: green, yellow 2, red 3
+  maria: green, yellow 2, red 3
+  fiona: green 1, yellow 1, red 3
+  neshin: green, yellow 2, red 3
+
+
+frontend students
+  marcus: green, yellow 3, red 2
+  winston: green, yellow 3, red 2
+  anna: green 2, yellow 1, red 2
+  orlando: green 1, yellow 2 and red 2
+
+
+.net students
+  hannah: green, yellow 2, red 3
+  ash: green 1, yellow 1, red 3
+  leona: green 1, yellow 1, red 3
+```
 
